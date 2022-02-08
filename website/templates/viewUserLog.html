@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block header %} {% endblock %}
+
+
+{% block content %}
+<div class="panel">
+    <div class="info-panel">
+        <div class="title-holder">
+        <h2>View logs in database</h2>
+        </div>
+        <form action="/viewuserlog" method="post">
+            <button id="display-btn"class="display-btn" name="search" type="submit"> Display </button>
+            <textarea style="display: none;" name="hidden" id="hidden" cols="0" rows="0"></textarea>
+        <div class="code-list">
+        <table class="loglist">
+            <tbody class="table-body">
+            <tr class="list-header">
+                 <th>Id</th>
+                 <th>Error Code</th>
+                 <th>Operator</th>
+                 <th>Date</th>
+            </tr>
+            {% for keys in final_dict %}
+                <tr class="loglist-item" name="item" onClick="Assign(this)">
+                    <td>{{final_dict[keys][0]}}</td> 
+                    <td>{{final_dict[keys][1]}}</td>
+                    <td>{{final_dict[keys][2]}}</td> 
+                    <td>{{final_dict[keys][3]}}</td>
+                </tr>       
+            {% endfor %}
+            </tbody>
+            
+            </table>
+            </div>
+        </form>
+        </ul>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="info-panel">
+        <div class="par-wrapper">
+
+        <h2>Error Id: {{ entry[0] }} </h2>
+        <br>
+        <h4>Error Number: {{ entry[1] }} </h4>
+        <br>
+        <h4>Operator: {{ entry[2] }}</h4>
+        <br>
+        <h4>Date Entered: {{ entry[3] }}</h4>
+        <br>
+        <h4>Circumstances that led to the error:</h4>
+        <p> {{ entry[4] }} </p>
+        <br>
+        <h4>Actions taken to resolve the issue:</h4>
+        <p> {{ entry[5] }} </p>
+        <br>
+        <h4>Equpiment broken due to error:</h4>
+        <p>{{ entry[6] }}</p>
+        <br>
+        <h4>Preventative measures to stop error from occuring:</h4>
+        <p> {{ entry[7] }}</p>
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+    document.getElementById("display-btn").disabled = true;
+
+    function Assign(obj){
+        document.getElementById("display-btn").disabled = false;
+        //console.log(obj);
+        var current_selected = document.getElementsByClassName("loglist-item-selected");
+        
+        if (current_selected[0]){
+            current_selected[0].className="loglist-item";
+        }
+        obj.className="loglist-item-selected";
+      document.getElementById("hidden").value = obj.children[0].innerHTML;
+    //  window.location.reload();
+    }
+</script>
+{% endblock %}

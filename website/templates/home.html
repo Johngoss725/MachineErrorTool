@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="panel">
+    <div class="inside-panel-instance">
+        <h2>Error Code Logging Tool</h2>
+
+    </div>
+</div>
+
+<div class="panel">
+<div class="inside-panel">
+    <div class="pic-wrapper">
+<img class="machine-pic" src="./static/HE.jpg" alt="A picture of a horizontal expansion machine">
+    </div>
+<div class="par-wrapper">
+    <p>
+This application provides an interface for a user to search and create<br>
+error logs that correspond with machine generated error codes. I created <br>
+it with the a horizontal expansion machine in mind.<br>
+<br>
+I operated one of these machines to expand radiator coils. The process of <br>
+looking up the error codes in the printed book and reading the other <br>
+operators handwritten logs was tedius. <br>
+<br>
+I used the pdf of the manual and a python script to pull the individual error <br>
+codes out for the datatbase. Originally I created the program with tkinter <br>
+and python. My goal with this project was to place the application in a state<br> 
+that was more easily distributable using Python and Flask. <br>
+<br>
+This app is created with Flask and SQL-Alchemy. To use the app go to the<br>
+login page and enter the guest username provided at the top of the screen. 
+</p>
+    </div>
+</div>
+</div>
+{% endblock %}

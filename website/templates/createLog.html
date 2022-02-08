@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+
+{% block info %}
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="panel" >
+        <div class=info-panel>
+        <h2>Error Log Form</h2>
+        <p> Please fill out the form below and be as descriptive as possible to help other operators.</p>
+        </div>
+    </div>
+    
+    <div class="panel">
+    
+    <form class="userForm" action="" method='POST'>
+        
+            <label for="error_num">Enter the error number that occured on the screen:</label>
+            <input class="form-text" type="text" name="error_num" id="error_num">
+
+        <label for="equip">Please list any broken equipment here</label>
+        <textarea name="equip" id="equip" rows="4" cols="50"></textarea>
+
+        <label for="circumstance">Please describe the circumstance that led to the error.</label>
+        
+        <textarea id="circumstance" name="circumstance" rows="4" cols="50"></textarea>
+        
+        <label for="actions">Please explain the actions you took to resolve the issue.</label>
+        
+        <textarea id="actions" name="actions" rows="4" cols="50"></textarea>
+        
+        <label for="notes">Please describe how to prevent the error in the future.  </label>
+        
+        <textarea id="prevent" name="prevent" rows="4" cols="50"></textarea>
+        
+        <button class="btm-btn"type="submit" onClick="return empty()">Submit Note</button>
+    </form>
+    </div>
+
+{% endblock %}

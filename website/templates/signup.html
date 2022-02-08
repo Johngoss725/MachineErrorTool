@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+<div class="panel">
+    <div class="info-panel">
+<h1>Sign-Up Here!</h1>
+    </div>
+</div>
+<div class="panel">
+    <div class=" info-panel">
+<form method="POST">
+        
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email"placeholder="Enter email"/>
+
+        <label for="firstName">User Name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName"placeholder="Enter first name"/>
+
+        <label for="password1">Password</label>
+        <input type="password" class="form-control" id="password1" name="password1"placeholder="Password"/>
+
+        <label for="password2">Re-Enter Password</label>
+        <input type="password" class="form-control" id="password2" name="password2"placeholder="Confirm Password"/>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</div>
+</form>
+{% endblock %}
+
+
+</body>
+</html>

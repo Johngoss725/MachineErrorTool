@@ -1,0 +1,183 @@
+html{
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color:cornflowerblue;
+}
+h2{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.info-panel{
+    width: 98%;
+    background-color: rgb(89, 131, 209);
+    border-radius: 2em;
+    margin-top:1em;
+    margin-bottom: 1em;
+    text-align: center;
+    margin: 1em;
+}
+.userForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    border-radius: 2em;
+    background-color: rgb(89, 131, 209);
+    text-align: center;
+}
+.form-text{
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+label{
+    margin:1em;
+    font-size: large;
+}
+textarea{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:2em ;
+}
+.btm-btn{
+    size: 3em;
+    background-color: rgb(20, 123, 220);
+    width:fit-content;
+    border-radius: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1em;
+    padding: 0.4em;
+}
+
+.panel{
+    display: flex;
+    border-radius: 3em;
+    background-color: rgb(255, 255, 255);
+    margin: 3em;
+    box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.418);
+    justify-content: center;
+    align-items: center;
+
+}
+.inside-panel{
+    display: flex;
+    background-color: rgb(80, 116, 184);
+    border-radius: 2em;
+    margin:1em;
+}
+.inside-panel-instance{
+    display: flex;
+    background-color: rgb(80, 116, 184);
+    border-radius: 2em;
+    margin:1em;
+    width: 100%;
+}
+
+.pic-wrapper{
+    flex-grow:1 ;
+    max-width: 40%;
+    text-align: center;
+    background-color: rgb(248, 248, 245);
+    border-radius: 1em;
+    margin: 1em;
+}
+.machine-pic{
+    
+width: 95%;
+margin-top:1em;
+margin-bottom: 1em;
+border-radius: 1em;
+
+}
+.par-wrapper{
+    text-justify: center;
+    flex-grow: 7;
+    background-color: rgb(250, 249, 245);
+    border-radius: 1em;
+    margin: 1em;
+
+}
+pre{
+    
+    font-size: large;
+    margin:1em
+}
+p{
+    
+        
+    font-size: large;
+    margin:1em
+}
+.form-control{
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+}
+.loglist{
+  
+    background-color: rgb(243, 243, 238);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.loglist-item{
+    margin: 1em;
+    
+}
+ul{
+padding-left: 0;
+
+}
+.title-holder{
+    background-color: rgb(246, 247, 246);
+    margin: 1em;
+    border-radius: 2em;
+}
+.code-list{
+    background-color: rgb(243, 243, 238);
+    height: 20em;
+    overflow-y: scroll;
+    margin:1em;
+}
+table{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.display-btn{
+    margin-top: 2em;
+    border-radius: 2em;
+}
+.loglist-item:hover{
+    background-color: rgb(106, 106, 179);
+    color: aliceblue;
+}
+.loglist-item-selected{
+    margin: 1em;
+    background-color: brown;
+}
+
+@media (max-width: 900px){
+    .inside-panel{
+        flex-direction: column;
+    }
+    .pic-wrapper{
+        max-width: 100%;
+    }
+    .form-control{
+        max-width: 80%;
+    }
+
+}

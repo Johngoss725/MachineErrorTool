@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block header %} {% endblock %}
+
+
+{% block content %}
+<div class="panel"> 
+    <div class="info-panel">
+        <h1>Sign In</h1>
+    </div>
+</div>
+    <br>
+<div class="panel">
+    <div class="info-panel">
+    <form action="/login" method ="post">
+        <p>If you just want to use the app without creating an account.</p>
+        <p>User Name: guest@email.com</p>
+        <p>Password: password</p>
+            <div>
+                <label for="email">Enter Your Email</label>
+                <div>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+
+            <div>
+                <label for="password">Enter Your Password </label>
+                <div>
+                    <input type="text" id="password" name="password">
+                </div>
+            </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+    </form>
+    </div>
+</div>
+{% endblock %}
